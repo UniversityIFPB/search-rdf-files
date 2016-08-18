@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY dcat "http://www.w3.org/ns/dcat#" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY sf "http://localhost/ontology/search-files" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/ns/dcat#"
+     xml:base="http://www.w3.org/ns/dcat"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sf="http://localhost/ontology/search-files">
+    <owl:Ontology rdf:about="http://www.w3.org/ns/dcat#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#distribution -->
+
+    <owl:ObjectProperty rdf:about="&dcat;distribution">
+        <rdfs:range rdf:resource="&dcat;Dataset"/>
+        <rdfs:domain rdf:resource="&foaf;Agente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#publisher -->
+
+    <owl:ObjectProperty rdf:about="&dcat;publisher">
+        <rdfs:range rdf:resource="&dcat;Dataset"/>
+        <rdfs:domain rdf:resource="&foaf;Agente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#description -->
+
+    <owl:DatatypeProperty rdf:about="&dcat;description">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&dcat;Dataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#downloadURL -->
+
+    <owl:DatatypeProperty rdf:about="&dcat;downloadURL">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&dcat;Distribution"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#keywork -->
+
+    <owl:DatatypeProperty rdf:about="&dcat;keywork">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&dcat;Dataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#title -->
+
+    <owl:DatatypeProperty rdf:about="&dcat;title">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&dcat;Dataset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost/ontology/search-files#AproveitamentoDeEstudos -->
+
+    <owl:Class rdf:about="&sf;#AproveitamentoDeEstudos">
+        <rdfs:subClassOf rdf:resource="&sf;#Resolucao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/ontology/search-files#AtividadeComplementar -->
+
+    <owl:Class rdf:about="&sf;#AtividadeComplementar">
+        <rdfs:subClassOf rdf:resource="&sf;#Resolucao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/ontology/search-files#Edital -->
+
+    <owl:Class rdf:about="&sf;#Edital">
+        <rdfs:subClassOf rdf:resource="&dcat;Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/ontology/search-files#Matriculas -->
+
+    <owl:Class rdf:about="&sf;#Matriculas">
+        <rdfs:subClassOf rdf:resource="&sf;#Resolucao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/ontology/search-files#MatrixCurricular -->
+
+    <owl:Class rdf:about="&sf;#MatrixCurricular">
+        <rdfs:subClassOf rdf:resource="&dcat;Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/ontology/search-files#Monitoria -->
+
+    <owl:Class rdf:about="&sf;#Monitoria">
+        <rdfs:subClassOf rdf:resource="&sf;#Edital"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/ontology/search-files#Pcc -->
+
+    <owl:Class rdf:about="&sf;#Pcc">
+        <rdfs:subClassOf rdf:resource="&dcat;Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/ontology/search-files#PlanoDeEnsino -->
+
+    <owl:Class rdf:about="&sf;#PlanoDeEnsino">
+        <rdfs:subClassOf rdf:resource="&dcat;Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/ontology/search-files#ReconhecimentoDeCompetencias -->
+
+    <owl:Class rdf:about="&sf;#ReconhecimentoDeCompetencias">
+        <rdfs:subClassOf rdf:resource="&sf;#Edital"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/ontology/search-files#Resolucao -->
+
+    <owl:Class rdf:about="&sf;#Resolucao">
+        <rdfs:subClassOf rdf:resource="&dcat;Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/ontology/search-files#TabelaDeAtividadesComplementares -->
+
+    <owl:Class rdf:about="&sf;#TabelaDeAtividadesComplementares">
+        <rdfs:subClassOf rdf:resource="&dcat;Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost/ontology/search-files#Tcc -->
+
+    <owl:Class rdf:about="&sf;#Tcc">
+        <rdfs:subClassOf rdf:resource="&dcat;Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Dataset -->
+
+    <owl:Class rdf:about="&dcat;Dataset"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Distribution -->
+
+    <owl:Class rdf:about="&dcat;Distribution"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agente -->
+
+    <owl:Class rdf:about="&foaf;Agente"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
