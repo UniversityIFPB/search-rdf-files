@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ns0="http://localhost/search-files/ontology.rdf#">
+
+  <rdf:Description rdf:about="http://localhost/search-files/files.rdf#1472749780">
+    <ns0:title>Mr</ns0:title>
+    <ns0:author>Bloggs</ns0:author>
+    <ns0:keyword>Joe</ns0:keyword>
+    <ns0:downloadURL>files/1472749780.wav</ns0:downloadURL>
+    <ns0:description>Joseph</ns0:description>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://localhost/search-files/files.rdf#1472749660">
+    <ns0:title>Mr</ns0:title>
+    <ns0:author>Bloggs</ns0:author>
+    <ns0:keyword>Joe</ns0:keyword>
+    <ns0:downloadURL>files/1472749660.wav</ns0:downloadURL>
+    <ns0:description>Joseph</ns0:description>
+  </rdf:Description>
+
+</rdf:RDF>
